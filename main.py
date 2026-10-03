@@ -1,7 +1,7 @@
 # Generador de contraseñas
 
-# Importamos la librería random para elegir caracteres al azar
-import random
+# Importamos la librería secrets para elegir caracteres de forma segura
+import secrets
 
 print(" === GENERADOR DE CONTRASEÑAS === ")
 
@@ -52,7 +52,7 @@ if incluir_simbolos == "s":
 
 # Generamos la contraseña carácter por carácter
 for _ in range(longitud):
-    contrasenia += random.choice(caracteres)
+    contrasenia += secrets.choice(caracteres)
 
 # Mostramos la contraseña generada
 print(f"Tu contraseña es: {contrasenia}")
